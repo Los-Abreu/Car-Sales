@@ -8,7 +8,7 @@ const AdditionalFeatures = props => {
       {props.additionalFeatures.length ? (
         <ol type="1">
           {props.additionalFeatures.map(item => (
-            <AdditionalFeature key={item.id} feature={item} />
+            <AdditionalFeature  add_features={() =>props.add_features(item)} key={item.id} feature={item} />
           ))}
         </ol>
       ) : (
@@ -17,5 +17,11 @@ const AdditionalFeatures = props => {
     </div>
   );
 };
+
+// const mapStateToProps = state => {
+//   return {
+//     additionalFeatures: state.additionalFeatures
+//   }
+// };
 
 export default AdditionalFeatures;
